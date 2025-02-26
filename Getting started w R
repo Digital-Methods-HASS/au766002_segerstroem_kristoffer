@@ -15,3 +15,17 @@ I used this code:
 library(tidyverse)
 interviews <- read_csv("SAFI_clean.csv")
 
+5) Challenge: Tidy up your Danish monarchs dataset (you created last week) sufficiently so that you can load it into R as a tibble using the read_csv() and calculate the mean() and median() duration of their rule over time. Remember you can reload the dataset infinitely and tweak the loading as you discover issues :)
+This is the R code we used. 
+library(tidyverse)
+na.omit(Danish_kings_1_)
+glimpse(Danish_kings_1_)
+Danish_kings_1_ <- Danish_kings_1_ %>% 
+mutate(start_reign = as.numeric(start_reign),end_reign = as.numeric(end_reign))
+Danish_kings_1_ <- Danish_kings_1_ %>%
+  mutate(varighed = end_reign - start_reign)
+mean(Danish_kings_1_$varighed, na.rm = TRUE)
+median(Danish_kings_1_$varighed, na.rm = TRUE)
+
+Mean = 20.15
+Median = 17
