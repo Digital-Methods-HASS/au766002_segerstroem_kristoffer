@@ -7,3 +7,11 @@ By using the function __ we found out that sum((na.omit(rooms<2)))13 elements in
 
 3) What is the result of running the median() function on the above 'rooms' vector?
 The median is “N/A” if we use the function “median()”. But if we use the function “median(rooms, na.rm = TRUE)” to remove the N/A, we find out that the median is 2. 
+
+4) In order to submit a screenshot of RStudio, do the following first: Inside your R Project (.Rproj), install the 'tidyverse' package and use the download.file() and read_csv() function to read the SAFI_clean.csv dataset into your R project as 'interviews' digital object (see instructions in https://datacarpentry.org/r-socialsci/setup.html and 'Starting with Data' section). Take a screenshot of your RStudio interface showing
+
+a) the line of code you used to create the object 'interviews', incl. the output in the console,
+I used this code:
+library(tidyverse)
+interviews <- read_csv("SAFI_clean.csv")
+
